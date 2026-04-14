@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cars</title>
+
+<style>
+
+body {
+font-family: Arial;
+background-color: #ffe;
+padding: 20px;
+}
+
+.box {
+background-color: white;
+padding: 15px;
+margin: 10px;
+border-radius: 8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Cars List</h1>
+
+{% for c in cars %}
+
+<div class="box">
+
+<h2>{{ c.brand }}</h2>
+
+<p>Year: {{ c.year }}</p>
+
+</div>
+
+{% endfor %}
+
+<h2>Newest Car: {{ newest.brand }}</h2>
+
+<h2>Oldest Car: {{ oldest.brand }}</h2>
+
+</body>
+</html>
